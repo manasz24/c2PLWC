@@ -3,14 +3,15 @@ import { LightningElement } from 'lwc';
 export default class C2pParentComp extends LightningElement {
 
     showModal = false
-
-    handleClick(){
+    msg
+    handleClick(event){
 
         this.showModal =true
 
     }
 
-    closeHandler(){
+    closeHandler(event){
+        this.msg = event.detail.msg
         this.showModal =false
 
     }

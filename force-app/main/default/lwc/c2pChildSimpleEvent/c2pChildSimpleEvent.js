@@ -5,7 +5,11 @@ export default class C2pChildSimpleEvent extends LightningElement {
 
     closeHandler(){
 
-        const myEvent = new CustomEvent('close')
+        const myEvent = new CustomEvent('close',{
+            detail: { 
+                msg:"Modal Closed Successfully!!"
+            }
+        })
         this.dispatchEvent(myEvent)
 
     }
