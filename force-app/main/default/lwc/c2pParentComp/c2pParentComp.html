@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="child to parent communication">
+
+      <lightning-button label = "Show modal" onclick={handleClick}>
+      </lightning-button>  
+       <template if:true={showModal}> 
+        <c-c2p-child-simple-event
+            onclose={closeHandler}>
+        </c-c2p-child-simple-event>
+    </template>
+        </lightning-card>
+</template>
