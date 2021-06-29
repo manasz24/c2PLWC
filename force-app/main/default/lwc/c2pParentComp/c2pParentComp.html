@@ -4,10 +4,16 @@
       <lightning-button label = "Show modal" onclick={handleClick}>
       </lightning-button>  
       <h1>{msg}</h1>
-       <template if:true={showModal}> 
+       <!-- <template if:true={showModal}> 
         <c-c2p-child-simple-event
             onclose={closeHandler}>
         </c-c2p-child-simple-event>
+    </template> -->
+
+    <template if:true={showModal}> 
+        <c-c2p-event-bubble
+            onclose={closeHandler}>
+        </c-c2p-event-bubble>
     </template>
         </lightning-card>
 </template>
